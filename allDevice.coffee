@@ -18,7 +18,8 @@
     X: 9.8544369
     Y: 4.5855823
 
-setModifier = (that, fview, device) ->
+setModifier = (that, device) ->
+  fview = FView.fromTemplate that
   svgRatio = device.main.width / device.main.height
   deviceMod = fview.children[0].modifier
   screenMod = fview.children[0].children[1].modifier
@@ -39,10 +40,6 @@ setModifier = (that, fview, device) ->
   ]
   screenMod.setAlign align
 
-Template.smartphoneSvg.rendered = ->
-  fview = FView.fromTemplate @
-  setModifier @, fview, smartphone
+Template.smartphoneSvg.rendered = -> setModifier @, smartphone
 
-Template.desktopSvg.rendered = ->
-  fview = FView.fromTemplate @
-  setModifier @, fview, desktop
+Template.desktopSvg.rendered = -> setModifier @, desktop
