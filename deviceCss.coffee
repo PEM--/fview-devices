@@ -1,5 +1,7 @@
 css = new CSSC
 css
+  .add '.s1', backgroundColor: CSSC.green
+  .add '.s2', backgroundColor: CSSC.yellow
   .add '.fview-devices-desktop-svg-empty',
     stroke: CSSC.gray
     fill: CSSC.silver
@@ -10,7 +12,7 @@ css
   .add 'div.fview-device-desktop-container',
     width: CSSC.pc 100
     height: 0
-    paddingTop: CSSC.pc 100*43.50619/71.215572
+    paddingTop: CSSC.pc 100*svgHeight/svgWidth
     position: 'relative'
   .add 'svg.fview-devices-svg',
     position: 'absolute'
