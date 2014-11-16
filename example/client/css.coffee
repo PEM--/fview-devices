@@ -1,7 +1,6 @@
 css = new CSSC
 css
-  .add '.gray-bg',
-    backgroundColor: CSSC.gray
+  .add '.test', backgroundColor: CSSC.red
   .add '.dotloader-background',
     backgroundColor: CSSC.green
     borderRadius: CSSC.px 5

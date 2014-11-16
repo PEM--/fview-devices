@@ -1,6 +1,5 @@
 css = new CSSC
 css
-  .add '.test', fill: CSSC.red, backgroundColor: CSSC.red
   .add '.fview-devices-desktop-svg-empty',
     stroke: CSSC.gray
     fill: CSSC.silver
