@@ -68,7 +68,7 @@ customize it with CSS, LESS, Stylus or in CoffeeScript using [CSSC](https://gith
 
 Here are the default CSS classes names used on the devices:
 ```css
-.fview-devices-svg-empty {
+.fview-devices-desktop-svg-empty {
   stroke: gray
   fill: silver
   stroke-width: .5  
@@ -76,5 +76,25 @@ Here are the default CSS classes names used on the devices:
 
 .fview-devices-desktop-svg-filled {
   fill: gray
+}
+
+fview-devices-smartphone-svg-empty {
+  stroke: black
+  fill: gray
+  stroke-width: .5  
+}
+
+.fview-devices-smartphone-svg-filled {
+  fill: black
+}
+
+fview-devices-tablet-svg-empty {
+  stroke: black
+  fill: gray
+  stroke-width: .5  
+}
+
+.fview-devices-tablet-svg-filled {
+  fill: black
 }
 ```

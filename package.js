@@ -23,9 +23,8 @@ Package.onUse(function(api) {
   api.addFiles(
     [
       'desktop.jade',
-      'desktop.coffee',
       'smartphone.jade',
-      'smartphone.coffee',
+      'allDevice.coffee',
       'deviceCss.coffee'
     ],
     'client');
