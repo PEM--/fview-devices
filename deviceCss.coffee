@@ -35,6 +35,11 @@ css
     height: 0
     paddingTop: CSSC.pc 100*smartphone.main.height/smartphone.main.width
     position: 'relative'
+  .add 'div.fview-device-tablet-container',
+    width: CSSC.pc 100
+    height: 0
+    paddingTop: CSSC.pc 100*tablet.main.height/tablet.main.width
+    position: 'relative'
   .add 'svg.fview-devices-svg',
     position: 'absolute'
     top: 0

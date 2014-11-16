@@ -1,3 +1,13 @@
+@desktop =
+  main:
+    width: 71.215572
+    height: 43.5061
+  screen:
+    width: 51.557697
+    height: 29.363539
+    X: 9.8544369
+    Y: 4.5855823
+
 @smartphone =
   main:
     width: 20.46875
@@ -8,15 +18,15 @@
     X: 2.856971
     Y: 3.6170185
 
-@desktop =
+@tablet =
   main:
-    width: 71.215572
-    height: 43.5061
+    width: 33.94285
+    height: 49.571767
   screen:
-    width: 51.557697
-    height: 29.363539
-    X: 9.8544369
-    Y: 4.5855823
+    width: 25.007973
+    height: 36.581028
+    X: 4.4674511
+    Y: 5.580843
 
 setModifier = (that, device) ->
   fview = FView.fromTemplate that
@@ -43,3 +53,5 @@ setModifier = (that, device) ->
 Template.smartphoneSvg.rendered = -> setModifier @, smartphone
 
 Template.desktopSvg.rendered = -> setModifier @, desktop
+
+Template.tabletSvg.rendered = -> setModifier @, tablet

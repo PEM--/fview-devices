@@ -1,0 +1,12 @@
+template(name='tabletSvg')
+  +View align='[.5,.5]' origin='[.5,.5]'
+    +Surface
+      .fview-device-tablet-container
+        svg.fview-devices-svg(preserveAspectRatio='none', viewBox='0 0 33.94285 49.571767')
+          rect.fview-devices-tablet-svg-empty(style='fill-opacity: 1; stroke-miterlimit: 4; stroke-opacity: 1; stroke-dasharray: none;', width='32.861721', height='48.490639', x='0.5405637', y='0.54056752', ry='5.0511079', rx='5.0511079')
+          rect.fview-devices-tablet-svg-empty(style='fill-opacity: 1; stroke-miterlimit: 4; stroke-opacity: 1; stroke-dasharray: none;', width='25.007973', height='36.581028', x='4.4674511', y='5.580843', ry='0')
+          rect.fview-devices-tablet-svg-filled(style='fill-opacity: 1; stroke: none;', width='6.200325', height='1.8183988', x='13.871397', y='44.664501')
+          ellipse.fview-devices-tablet-svg-filled(transform='translate(-73.04657,-102.82765)', d='m 91.240275,105.99403 c 0,0.42021 -0.348457,0.76086 -0.7783,0.76086 -0.429843,0 -0.778299,-0.34065 -0.778299,-0.76086 0,-0.4202 0.348456,-0.76085 0.778299,-0.76085 0.429843,0 0.7783,0.34065 0.7783,0.76085 z', style='fill-opacity: 1; stroke: none;', cx='90.461975', cy='105.99403', rx='0.77829951', ry='0.76085216')
+    +StateModifier origin='[0, 0]'
+      +ContainerSurface
+        +Template.dynamic template=template

@@ -24,6 +24,7 @@ Package.onUse(function(api) {
     [
       'desktop.jade',
       'smartphone.jade',
+      'tablet.jade',
       'allDevice.coffee',
       'deviceCss.coffee'
     ],
