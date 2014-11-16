@@ -1,6 +1,6 @@
-@svgWidth = 71.215572
-@svgHeight = 43.5061
-svgRatio = svgWidth / svgHeight
+@desktopSvgWidth = 71.215572
+@desktopSvgHeight = 43.5061
+svgRatio = desktopSvgWidth / desktopSvgHeight
 svgScreenWidth = 51.557697
 svgScreenHeight = 29.363539
 svgScreenX = 9.8544369
@@ -11,6 +11,7 @@ FView.ready ->
 
 Template.desktopSvg.rendered = ->
   fview = FView.fromTemplate @
+  console.log fview
   desktopMod = fview.children[0].modifier
   screenMod = fview.children[0].children[1].modifier
   screenSurf = fview.children[0].children[1].children[0].view
@@ -21,11 +22,11 @@ Template.desktopSvg.rendered = ->
   width = if @data.width? then @data.width else 500
   desktopMod.setSize [width, width/svgRatio]
   screenMod.setProportions [
-    svgScreenWidth / svgWidth
-    svgScreenHeight / svgHeight
+    svgScreenWidth / desktopSvgWidth
+    svgScreenHeight / desktopSvgHeight
   ]
   align = [
-    svgScreenX / svgWidth
-    svgScreenY / svgHeight
+    svgScreenX / desktopSvgWidth
+    svgScreenY / desktopSvgHeight
   ]
   screenMod.setAlign align

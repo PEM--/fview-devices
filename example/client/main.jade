@@ -3,8 +3,13 @@ head
 
 template(name='famousInit')
   +StateModifier id='app' align='[.5, .5]' origin='[.5, .5]' translate='[0,0,100]'
-    +desktopSvg width=400 perspective=200
-      +demoContent
+    //+desktopSvg width=400 perspective=200 clip=true target='demoContent'
+    +smartphoneSvg width=150 perspective=200 clip=true target='demoContent'
 
 template(name='demoContent')
-  p Hello world
+  +Surface class='test'
+    | Screen background
+  +StateModifier translate='[0,0,1]'
+    +StateModifier align='[.5, .5]' origin='[.5, .5]' size='[50, 50]' transform='eval:Transform.rotateY(Math.PI/4)'
+      +DotLoader
+        | 
