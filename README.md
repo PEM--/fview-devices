@@ -10,3 +10,10 @@ API :
   create effect where the animations are literally going outside of the screen.
   When set to `true`, the widget makes you really feel that the animation is
   contained within the screen.
+
+
+  >For illustration purposes, here's an example of a clipped content:
+  ![Clipped](https://raw.githubusercontent.com/PEM--/fview-devices/master/private/clipped.png)
+
+  > And one for the unclipped content:
+  ![Unclipped](https://raw.githubusercontent.com/PEM--/fview-devices/master/private/unclipped.png)
