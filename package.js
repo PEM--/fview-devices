@@ -23,7 +23,8 @@ Package.onUse(function(api) {
   api.addFiles(
     [
       'desktop.jade',
-      'deviceCss.coffee'
+      'deviceCss.coffee',
+      'desktop.coffee'
     ],
     'client');
 });
