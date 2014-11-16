@@ -1,12 +1,10 @@
 css = new CSSC
 css
-  .add '.s1', backgroundColor: CSSC.green
-  .add '.s2', backgroundColor: CSSC.yellow
+  .add '.test', fill: CSSC.red, backgroundColor: CSSC.red
   .add '.fview-devices-desktop-svg-empty',
     stroke: CSSC.gray
     fill: CSSC.silver
     strokeWidth: .5
-  .add '.test', fill: CSSC.red, backgroundColor: CSSC.red
   .add '.fview-devices-desktop-svg-filled',
     fill: CSSC.gray
   .add 'div.fview-device-desktop-container',

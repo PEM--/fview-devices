@@ -1,6 +1,6 @@
 template(name='desktopSvg')
-  +View id='viewDesktop' align='[.5, .5]' origin='[.5, .5]'
-    +Surface class='s1'
+  +View align='[.5, .5]' origin='[.5, .5]'
+    +Surface
       .fview-device-desktop-container
         svg.fview-devices-svg(preserveAspectRatio='none', viewBox='0 0 71.215572 43.50619')      
           rect#rect10512.fview-devices-desktop-svg-empty(rx='4.0680571', style='stroke-miterlimit: 4; stroke-opacity: 1; stroke-dasharray: none;', width='58.774101', height='39.011684', x='6.2462711', y='0.54034019', ry='4.0915132')
@@ -9,6 +9,10 @@ template(name='desktopSvg')
           path#path10518.fview-devices-desktop-svg-empty(style='fill-opacity: 1; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-opacity: 1; stroke-dasharray: none;', d='m 0.562561,39.70315 5.545657,-3.63548 58.733551,0 5.79775,3.51012 z')
           ellipse#path10520.fview-devices-desktop-svg-filled(transform='translate(-50.569154,-96.082021)', d='m 87.076228,98.756325 c 0,0.484647 -0.401893,0.877531 -0.897654,0.877531 -0.495761,0 -0.897655,-0.392884 -0.897655,-0.877531 0,-0.484648 0.401894,-0.877532 0.897655,-0.877532 0.495761,0 0.897654,0.392884 0.897654,0.877532 z', style='fill-opacity: 1; stroke: none;', cx='86.178574', cy='98.756325', rx='0.89765471', ry='0.87753171')
     +StateModifier origin='[0, 0]'
-        +ContainerSurface class='s2'
-          +Surface
-            | Test
+      +ContainerSurface perspective=500
+        +StateModifier translate='[0,0,100]'
+          +StateModifier align='[.5, .5]' origin='[.5, .5]' size='[75, 75]' transform='eval:Transform.rotateY(Math.PI/4)'
+            +DotLoader
+              | 
+            //+Surface align='[.5,.5]' origin='[.5,.5]' class='test' size='[100,100]'  transform='eval:Transform.rotateY(Math.PI/4)'
+              | Test
