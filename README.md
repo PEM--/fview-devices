@@ -30,11 +30,11 @@ And then in `client` directory, call your devices like this:
 ```jade
 +StateModifier id='app' align='[.5, .5]' origin='[.5, .5]' translate='[0,0,100]'
   // For the desktop
-  +desktopSvg width=400 perspective=200 clip=true target='demoContent'
+  +desktopSvg width=400 perspective=200 clip=true template='demoContent'
   // For the smartphone
-  +smartphoneSvg width=150 perspective=200 clip=true target='demoContent'
+  +smartphoneSvg width=150 perspective=200 clip=true template='demoContent'
   // For the tablet
-  +tabletSvg width=150 perspective=200 clip=true target='demoContent'
+  +tabletSvg width=150 perspective=200 clip=true template='demoContent'
 
 template(name='demoContent')
   +Surface class='test'
