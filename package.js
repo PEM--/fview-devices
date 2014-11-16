@@ -11,6 +11,7 @@ Package.onUse(function(api) {
   api.use('raix:famono@0.9.16', { weak: true });
   api.use([
     'templating@1.0.5',
+    'coffeescript@1.0.4',
     'mquandalle:jade@0.2.9',
     'gadicohen:famous-views@0.1.25',
     'pierreeric:cssc@1.0.3',
@@ -19,6 +20,10 @@ Package.onUse(function(api) {
     'pierreeric:cssc-colors@1.0.3'
   ], 'client');
 
-  api.addFiles('desktop.jade', 'client');
-
+  api.addFiles(
+    [
+      'desktop.jade',
+      'deviceCss.coffee'
+    ],
+    'client');
 });
