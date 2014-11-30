@@ -22,7 +22,7 @@
     ],
     [
       "gadicohen:famous-views",
-      "0.1.25"
+      "0.1.29"
     ],
     [
       "geojson-utils",
@@ -58,7 +58,7 @@
     ],
     [
       "mquandalle:jade",
-      "0.2.9"
+      "0.3.0"
     ],
     [
       "observe-sequence",
@@ -70,11 +70,11 @@
     ],
     [
       "pierreeric:cssc",
-      "1.0.3"
+      "1.0.4"
     ],
     [
       "pierreeric:cssc-colors",
-      "1.0.3"
+      "1.0.4"
     ],
     [
       "pierreeric:cssc-famous",

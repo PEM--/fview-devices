@@ -1,16 +1,46 @@
 head
-  title Test
-
-template(name='famousInit')
-  +StateModifier id='app' align='[.5, .5]' origin='[.5, .5]' translate='[0,0,100]'
-    //+desktopSvg width=400 perspective=200 clip=true template='demo'
-    //+smartphoneSvg width=150 perspective=200 clip=true template='demo'
-    +tabletSvg width=200 perspective=200 clip=true template='demo'
+  title fview-devices demo
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, maximum-scale=1, user-scalable=no')
+  meta(name='apple-mobile-web-app-capable', content='yes')
+  meta(name='apple-mobile-web-app-status-bar-style', content='black')
+  meta(name='mobile-web-app-capable', content='yes')
+body  
+  +famousContext id='mainCtx'
+    +StateModifier align='[.5,.5]' origin='[.5,.5]' proportions='[.9,.9]'
+      +StateModifier align='[.5,0]' origin='[.5,0]' proportions='[1,.5]'
+        +Surface align='[0,0]' origin='[0,0]' proportions='[.33,1]' class='label'
+          p Basic tablet with clipped app
+          pre +tabletSvg width=120 clip='true' 
+        +StateModifier align='[0,0]' origin='[0,0]' proportions='[.33,1]'
+          +tabletSvg width=120 clip='true' template='demo'
+        +Surface align='[.33,0]' origin='[0,0]' proportions='[.33,1]' class='label'
+          p Custom CSS themed smartphone
+          pre +smartphoneSvg width=70 clip='true'
+        +StateModifier align='[.33,0]' origin='[0,0]' proportions='[.33,1]'
+          +smartphoneSvg width=70 clip='true' template='demo'
+        +Surface align='[.66,0]' origin='[0,0]' proportions='[.33,1]' class='label'
+          p Basic desktop with clipped app
+          pre +desktopSvg width=250 clip=true 
+        +StateModifier align='[.66,0]' origin='[0,0]' proportions='[.33,1]'
+          +desktopSvg width=250 clip=true template='demo'
+      +Surface align='[.5,.5]' origin='[.5,0]' proportions='[1,.5]' class='label'
+        p Basic desktop with unclipped app and perspective
+        pre +desktopSvg width=400 perspective=300 clip=false
+      +StateModifier align='[.5,.5]' origin='[.5,0]' proportions='[1,.55]'
+        +desktopSvg width=400 perspective=300 clip=false template='demofull'
 
 template(name='demo')
   +Surface class='test'
-    | Screen background
-  +StateModifier translate='[0,0,1]'
-    +StateModifier align='[.5, .5]' origin='[.5, .5]' size='[50, 50]' rotateY='45'
-      +DotLoader
-        | 
+    | 
+  +StateModifier align='[.5,.5]' origin='[.5,.5]' translate='[0,0,1]'
+    +DotLoader align='[.5,.5]' origin='[.5,.5]' isBgVisible='false'
+      | 
+
+template(name='demofull')
+  +Surface class='test' translate='[0,0,1]'
+    | 
+  +StateModifier align='[.5,.5]' origin='[.5,.5]' size='[160, 100]' translate='[0,0,100]'
+    +StateModifier align='[.5,.5]' origin='[.5,.5]' rotateY=getRot
+      +Surface class='surf3d'
+          | 3D

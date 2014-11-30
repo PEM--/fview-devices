@@ -10,6 +10,8 @@ This plugin brings devices surfaces in Blaze or Jade templating for [Meteor.js](
 ![Smartphone](https://raw.githubusercontent.com/PEM--/fview-devices/master/private/doc/smartphone.png)
 ![Tablet](https://raw.githubusercontent.com/PEM--/fview-devices/master/private/doc/tablet.png)
 
+**demo**: [fview-devices](http://fview-devices.meteor.com/).
+
 ## Usage
 Starts with the usual and add some packages:
 ```bash
